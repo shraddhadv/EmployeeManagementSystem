@@ -26,7 +26,6 @@ public class EmployeeManagementApiImpl implements EmployeeManagementApi {
     public ResponseEntity<WSEmployeeResponse> addEmployee(WSEmployee employee) {
         Integer id = employeeManagementService.addEmployee(employee.toVO());
         WSEmployeeResponse response = new WSEmployeeResponse();
-        System.out.println("1");
         response.setEmpId(id);
         return ResponseEntity.ok().body(response);
     }
