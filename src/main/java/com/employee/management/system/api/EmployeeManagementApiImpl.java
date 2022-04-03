@@ -48,6 +48,7 @@ public class EmployeeManagementApiImpl implements EmployeeManagementApi {
 
     @Override
     public ResponseEntity<Void> updateEmployee(Integer empId, WSEmployee request) {
+        System.out.println("3");
         employeeManagementService.updateEmployee(request.toVO(), empId);
         return ResponseEntity.noContent().build();
     }
