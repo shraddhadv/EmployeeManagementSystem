@@ -35,6 +35,7 @@ public class EmployeeManagementApiImpl implements EmployeeManagementApi {
     public ResponseEntity<WSEmployee> searchEmployee(Integer empId) {
         EmployeeVO employee = employeeManagementService.fetchEmployee(empId);
         WSEmployee response = new WSEmployee(employee);
+        System.out.println("2");
         return ResponseEntity.ok().body(response);
     }
 
